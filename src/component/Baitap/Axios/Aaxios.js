@@ -13,7 +13,11 @@ function Aaxios() {
     }, [])
 
     return(
-        <B data = {data}/>
+       
+        <>
+         <B data = {data}/>
+         <h1>sadjhsahdsakjdhskajhdksjah</h1>
+        </>
     )
 }
 export default Aaxios;

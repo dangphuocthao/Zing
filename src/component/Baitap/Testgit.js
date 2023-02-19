@@ -1,19 +1,25 @@
-import { useEffect, useState } from "react";
-import B from "./Baxios"
-import axios from "axios";
-function Aaxios() {
-    const [data, setData] = useState([])
-    useEffect( () => {
-        axios.get("https://jsonplaceholder.typicode.com/users")
-        .then(res => {
-            setData(res.data);
-        })
-        .catch(error => console.log(error))
-       
-    }, [])
+import B from './B';
+const data = [{
+    "id": 1,
+    "name": "Leanne Graham",
+    "username": "Bret",
+    "email": "Sincere@april.biz",
+    "address": {
+        "street": "Kulas Light",
+        "suite": "Apt. 556",
+    },
+    "phone": "1-770-736-8031 x56442",
+    "website": "hildegard.org",
+    "company": {
+        "name": "Romaguera-Crona",
+        "catchPhrase": "Multi-layered client-server neural-net", 
+    }
+},
+]
 
-    return(
-        <B data = {data}/>
+const A = (props) => {
+    return (
+        <B obj = {data}/>
     )
 }
-export default Aaxios;
+export default A;
